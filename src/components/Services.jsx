@@ -96,6 +96,7 @@ const Services = () => {
                   className="border-b border-gray-800"
                 >
                   <button 
+                    onMouseEnter={() => setActiveService(service.id)}
                     onClick={() => setActiveService(activeService === service.id ? null : service.id)}
                     className="w-full flex items-center justify-between py-6 text-left group"
                   >
