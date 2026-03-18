@@ -27,11 +27,17 @@ const Contact = () => {
       if (response.ok) {
         setStatus('success');
         setFormData({ name: '', email: '', message: '' });
+        // Auto-dismiss success message after 5 seconds
+        setTimeout(() => setStatus(''), 5000);
       } else {
         setStatus('error');
+        // Auto-dismiss error message after 5 seconds
+        setTimeout(() => setStatus(''), 5000);
       }
     } catch (error) {
       setStatus('error');
+      // Auto-dismiss error message after 5 seconds
+      setTimeout(() => setStatus(''), 5000);
     }
   };
 
